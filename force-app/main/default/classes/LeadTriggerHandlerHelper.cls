@@ -19,12 +19,6 @@ public with sharing class LeadTriggerHandlerHelper {
     public void checkRequiredFields(List<Lead> newLeads) {
 
         for (Lead lead : newLeads) {
-            if (lead.FirstName == null) {
-                lead.addError('Enter first name');
-            }
-            if (lead.LastName == null) {
-                lead.addError('Enter last name');
-            }
             if (lead.Email == null) {
                 lead.addError('Enter email');
             }

@@ -5,10 +5,9 @@
 public with sharing class LeadTriggerHandler {
     public static Boolean IS_FIRST_TRIGGER_RUN = true;
     LeadTriggerHandlerHelper helper = new LeadTriggerHandlerHelper();
-    //checks that firstname, lastname, email and phone are provided
+//checks that firstname, lastname, email and phone are provided
     public void beforeInsert(List<Lead> newLeads) {
         helper.checkRequiredFields(newLeads);
-
     }
 //creating new connection task according to new leads
     public void afterInsert(List<Lead> newLeads) {
